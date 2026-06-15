@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import trailerHero from "@/assets/trailer-hero.jpg";
+import trailerVideo from "@/assets/trailer-video.mp4.asset.json";
 import { AMAZON_URL } from "@/components/site/Nav";
 import { Heart, ShieldCheck, Sparkles, Sun, Users } from "lucide-react";
 
