@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import trailerHero from "@/assets/trailer-hero.jpg";
+import trailerVideo from "@/assets/trailer-video.mp4.asset.json";
 import { AMAZON_URL } from "@/components/site/Nav";
 import { Heart, ShieldCheck, Sparkles, Sun, Users } from "lucide-react";
 
@@ -61,25 +62,16 @@ function TrailerPage() {
       {/* Video */}
       <section className="py-20 bg-[oklch(0.12_0.03_265)]">
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <div
-            className="relative rounded-2xl overflow-hidden shadow-elegant border border-white/10"
-            style={{
-              background:
-                "radial-gradient(ellipse at top, oklch(0.25 0.04 265), oklch(0.12 0.03 265))",
-            }}
-          >
-            <div className="aspect-video w-full">
-              <iframe
-                title="Time Wasn't Up! — Book Trailer"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-white/10 aspect-video bg-black">
+            <video
+              src={trailerVideo.url}
+              controls
+              className="w-full h-full"
+              poster={trailerHero}
+            />
           </div>
           <p className="mt-4 text-center text-white/50 text-xs uppercase tracking-[0.25em]">
-            Trailer placeholder — easy to replace with the final video
+            Official Book Trailer — Time Wasn't Up!
           </p>
         </div>
       </section>
