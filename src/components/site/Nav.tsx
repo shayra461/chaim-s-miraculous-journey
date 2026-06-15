@@ -15,9 +15,9 @@ const links = [
 
 function BrandMark({ onDark }: { onDark: boolean }) {
   const accent = "text-amber-400";
-  const wordTop = onDark ? "text-white" : "text-foreground";
-  const wordBottom = onDark ? "text-amber-400" : "text-accent";
-  const border = onDark ? "border-amber-400/50" : "border-accent/60";
+  const wordTop = "text-white";
+  const wordBottom = onDark ? "text-amber-400" : "text-amber-400";
+  const border = onDark ? "border-amber-400/50" : "border-amber-400/60";
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <span
