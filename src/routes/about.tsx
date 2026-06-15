@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:title", content: "About Chaim Ilowitz" },
       { property: "og:url", content: "/about" },
-      { property: "og:image", content: authorPortrait },
+      { property: "og:image", content: authorPortrait.url },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </div>
           <div className="relative">
             <img
-              src={authorPortrait}
+              src={authorPortrait.url}
               alt="Portrait of Chaim Ilowitz"
               className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/5]"
             />
