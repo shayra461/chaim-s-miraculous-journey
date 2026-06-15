@@ -56,7 +56,7 @@ function HomePage() {
           <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left: copy */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-flex items-center gap-4 animate-fade-in">
@@ -111,21 +111,21 @@ function HomePage() {
           {/* Right: book visual */}
           <div className="relative flex justify-center lg:justify-end">
             {/* Glow behind book */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] bg-amber-500/20 blur-[120px] rounded-full pointer-events-none" />
-            {/* Decorative ring */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-amber-500/10 pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-amber-500/15 pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-amber-500/20 blur-[140px] rounded-full pointer-events-none" />
+            {/* Decorative rings */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] rounded-full border border-amber-500/10 pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] rounded-full border border-amber-500/15 pointer-events-none" />
 
             <div className="relative group animate-fade-up delay-200">
               <img
                 src={bookImg}
                 alt="Time Wasn't Up! by Chaim Ilowitz — hardcover book cover"
-                className="relative w-[260px] sm:w-[320px] lg:w-[360px] h-auto drop-shadow-[20px_30px_60px_rgba(0,0,0,0.75)] transform rotate-[-4deg] group-hover:rotate-0 transition-transform duration-700"
+                className="relative w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto drop-shadow-[24px_36px_80px_rgba(0,0,0,0.75)] transform rotate-[-4deg] group-hover:rotate-0 transition-transform duration-700"
                 width={720}
                 height={1080}
               />
               {/* Shadow puddle */}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-56 h-8 bg-black/50 blur-2xl rounded-full" />
+              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-72 h-10 bg-black/50 blur-2xl rounded-full" />
             </div>
           </div>
         </div>
