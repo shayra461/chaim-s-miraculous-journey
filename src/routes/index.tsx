@@ -3,7 +3,7 @@ import { ArrowRight, BookOpen, Heart, ShieldCheck, Sparkles, Star } from "lucide
 import heroImg from "@/assets/hero-home.jpg";
 import bookImg from "@/assets/book-mockup.jpg";
 import quoteBg from "@/assets/quote-bg.jpg";
-import authorImg from "@/assets/author-portrait.jpg";
+import authorImg from "@/assets/author-portrait.png.asset.json";
 import pathImg from "@/assets/path-sunrise.jpg";
 import { AMAZON_URL } from "@/components/site/Nav";
 import { SectionHeading } from "@/components/site/SectionHeading";

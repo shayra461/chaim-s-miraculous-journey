@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import authorPortrait from "@/assets/author-portrait.jpg";
+import authorPortrait from "@/assets/author-portrait.png.asset.json";
 import authorReading from "@/assets/author-reading.jpg";
 import authorWalking from "@/assets/author-walking.jpg";
 import lightClouds from "@/assets/light-clouds.jpg";
