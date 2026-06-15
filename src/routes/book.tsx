@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import bookImg from "@/assets/book-mockup.jpg";
+import bookImgAsset from "@/assets/book-cover-spread.png.asset.json";
+const bookImg = bookImgAsset.url;
 import readingImg from "@/assets/author-reading.jpg";
 import lightClouds from "@/assets/light-clouds.jpg";
 import { AMAZON_URL } from "@/components/site/Nav";

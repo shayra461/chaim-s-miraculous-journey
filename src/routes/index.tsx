@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, ShieldCheck, Sparkles, Star } from "lucide-react";
 import heroImg from "@/assets/hero-home.jpg";
-import bookImg from "@/assets/book-mockup.jpg";
+import bookImgAsset from "@/assets/book-cover-front.png.asset.json";
+const bookImg = bookImgAsset.url;
 import quoteBg from "@/assets/quote-bg.jpg";
 import authorImg from "@/assets/author-portrait.png.asset.json";
 import pathImg from "@/assets/path-sunrise.jpg";
