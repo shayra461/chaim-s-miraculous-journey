@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, ShieldCheck, Sparkles, Star } from "lucide-react";
-import heroImg from "@/assets/hero-home.jpg";
+
 import bookImgAsset from "@/assets/book-cover-front.png.asset.json";
 const bookImg = bookImgAsset.url;
 import quoteBg from "@/assets/quote-bg.jpg";
@@ -34,62 +34,108 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Sunrise over an open road symbolizing hope"
-          className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
-          width={1920}
-          height={1280}
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "var(--gradient-overlay)" }}
-        />
-        <div className="absolute inset-0 bg-[oklch(0.15_0.04_265)]/40" />
-
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-24 pb-16">
-          <div className="flex items-center justify-center gap-3 animate-fade-in">
-            <span className="h-px w-10 bg-accent" />
-            <span className="text-xs uppercase tracking-[0.3em] text-accent">
-              A True Memoir
-            </span>
-            <span className="h-px w-10 bg-accent" />
+      {/* HERO — Golden Sunrise Memoir */}
+      <section className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#0a0a0c]">
+        {/* Background layers */}
+        <div className="absolute inset-0">
+          {/* Deep night-to-dawn gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-[#1e1b4b] to-[#0a0a0c]" />
+          {/* Sunrise glow rising from bottom */}
+          <div
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[600px]"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 100%, rgba(245,158,11,0.18), transparent 70%)",
+            }}
+          />
+          {/* Vertical hourglass thread */}
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-amber-500/70 to-transparent" />
           </div>
-          <p className="mt-6 font-display text-xl md:text-2xl text-white/85 animate-fade-up">
-            Chaim Ilowitz presents
-          </p>
-          <h1 className="mt-4 font-display text-5xl sm:text-7xl md:text-8xl leading-[1.02] text-balance animate-fade-up delay-100">
-            Time Wasn't Up!
-          </h1>
-          <p className="mt-5 font-display text-2xl md:text-3xl text-accent italic animate-fade-up delay-200">
-            Thirty Miraculous Life Events
-          </p>
-          <p className="mt-7 mx-auto max-w-2xl text-base md:text-lg text-white/80 leading-relaxed animate-fade-up delay-300">
-            A remarkable true story of survival, faith, divine guidance, and the
-            miracles that shaped one man's life.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-up delay-400">
-            <a
-              href={AMAZON_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--gradient-gold)] text-gold-foreground text-sm font-medium tracking-wide shadow-elegant hover:-translate-y-0.5 transition-all"
-            >
-              Buy the Book <ArrowRight size={16} />
-            </a>
-            <Link
-              to="/trailer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/40 text-white text-sm font-medium tracking-wide hover:bg-white/10 transition-all"
-            >
-              Watch Trailer
-            </Link>
+          {/* Subtle horizon */}
+          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+        </div>
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: copy */}
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center gap-4 animate-fade-in">
+              <div className="h-px w-12 bg-amber-500/60" />
+              <span className="text-amber-400 font-body text-xs uppercase tracking-[0.32em] font-medium">
+                A True Memoir
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              <h1 className="font-display text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02] text-balance animate-fade-up">
+                Time Wasn't{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200">
+                  Up!
+                </span>
+              </h1>
+              <p className="font-cinzel text-amber-100/85 text-lg md:text-2xl tracking-[0.18em] animate-fade-up delay-100">
+                Thirty Miraculous Life Events
+              </p>
+            </div>
+
+            <p className="text-slate-300/80 font-body text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-up delay-200">
+              A remarkable true story of survival, faith, divine guidance, and
+              the miracles that shaped one man's life against all odds.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5 pt-2 animate-fade-up delay-300">
+              <a
+                href={AMAZON_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-8 py-4 bg-amber-500 text-[#0a0a0c] font-bold uppercase tracking-[0.22em] text-xs hover:bg-amber-400 transition-all duration-300 shadow-[0_20px_50px_-20px_rgba(245,158,11,0.6)] inline-flex items-center gap-2"
+              >
+                Order Today
+                <ArrowRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </a>
+              <Link
+                to="/trailer"
+                className="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-[0.22em] text-xs hover:bg-white/5 hover:border-amber-400/50 transition-all duration-300 flex items-center gap-3"
+              >
+                <span className="w-8 h-8 rounded-full border border-amber-400/60 flex items-center justify-center">
+                  <span className="w-0 h-0 border-t-[4px] border-t-transparent border-l-[6px] border-l-amber-400 border-b-[4px] border-b-transparent ml-1" />
+                </span>
+                Watch Trailer
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: book visual */}
+          <div className="relative flex justify-center lg:justify-end">
+            {/* Glow behind book */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] bg-amber-500/20 blur-[120px] rounded-full pointer-events-none" />
+            {/* Decorative ring */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-amber-500/10 pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-amber-500/15 pointer-events-none" />
+
+            <div className="relative group animate-fade-up delay-200">
+              <img
+                src={bookImg}
+                alt="Time Wasn't Up! by Chaim Ilowitz — hardcover book cover"
+                className="relative w-[260px] sm:w-[320px] lg:w-[360px] h-auto drop-shadow-[20px_30px_60px_rgba(0,0,0,0.75)] transform rotate-[-4deg] group-hover:rotate-0 transition-transform duration-700"
+                width={720}
+                height={1080}
+              />
+              {/* Shadow puddle */}
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-56 h-8 bg-black/50 blur-2xl rounded-full" />
+            </div>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-xs uppercase tracking-[0.25em]">
-          Scroll to discover
+        {/* Bottom scroll indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+          <span className="text-[10px] font-body uppercase tracking-[0.4em] text-white">
+            Scroll to discover
+          </span>
+          <div className="w-px h-10 bg-gradient-to-b from-white/70 to-transparent" />
         </div>
       </section>
 
