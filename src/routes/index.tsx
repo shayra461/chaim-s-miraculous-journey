@@ -228,7 +228,7 @@ function HomePage() {
               src={authorImg.url}
               alt="Author Chaim Ilowitz"
               loading="lazy"
-              className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/5]"
+              className="rounded-2xl shadow-elegant w-full object-cover object-top aspect-[4/5]"
             />
             <div
               className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full opacity-60 blur-2xl"
