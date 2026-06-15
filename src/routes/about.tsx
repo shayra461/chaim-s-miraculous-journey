@@ -57,7 +57,7 @@ export default function AboutPage() {
             <img
               src={authorPortrait.url}
               alt="Portrait of Chaim Ilowitz"
-              className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/5]"
+              className="rounded-2xl shadow-elegant w-full object-cover object-top aspect-[4/5]"
             />
           </div>
         </div>
