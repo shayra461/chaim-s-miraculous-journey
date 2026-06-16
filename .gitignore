@@ -33,3 +33,4 @@ dist-ssr
 
 # Large media files
 src/assets/trailer-video.mp4
+.vercel
