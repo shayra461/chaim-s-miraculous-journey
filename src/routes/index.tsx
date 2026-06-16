@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Heart, ShieldCheck, Sparkles, Star } from "lucide-react";
 
-import bookImgAsset from "@/assets/book-cover-front.png.asset.json";
-const bookImg = bookImgAsset.url;
+import bookImg from "@/assets/book-cover-front.png";
 import quoteBg from "@/assets/quote-bg.jpg";
-import authorImg from "@/assets/author-portrait.png.asset.json";
+import authorImg from "@/assets/author-portrait.png";
 import pathImg from "@/assets/path-sunrise.jpg";
 import { AMAZON_URL } from "@/components/site/Nav";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -272,7 +271,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-center">
           <div className="lg:col-span-2 relative">
             <img
-              src={authorImg.url}
+              src={authorImg}
               alt="Author Chaim Ilowitz"
               loading="lazy"
               className="rounded-2xl shadow-elegant w-full object-cover object-top aspect-[4/5]"

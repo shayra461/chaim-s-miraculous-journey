@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import trailerHero from "@/assets/trailer-hero.jpg";
-import trailerVideo from "@/assets/trailer-video.mp4.asset.json";
+const trailerVideo = "https://id-preview--22179785-29c6-427f-8f90-6840d750f934.lovable.app/__l5e/assets-v1/87cccd7f-90d4-44fc-8350-f221b4884884/trailer-video.mp4";
 import { AMAZON_URL } from "@/components/site/Nav";
 import { Heart, ShieldCheck, Sparkles, Sun, Users } from "lucide-react";
 
@@ -64,7 +64,7 @@ function TrailerPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <div className="relative rounded-2xl overflow-hidden shadow-elegant border border-white/10 aspect-video bg-black">
             <video
-              src={trailerVideo.url}
+              src={trailerVideo}
               controls
               className="w-full h-full"
               poster={trailerHero}
